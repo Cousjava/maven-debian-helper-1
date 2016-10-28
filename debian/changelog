@@ -1,10 +1,14 @@
 maven-debian-helper (2.1.2) UNRELEASED; urgency=medium
 
+  [ tony mancill ]
   * Team upload.
   * Update mh_make to no longer always be --verbose (Closes: #826430)
     - Thank you Christopher Hoskin for the patch.
   * Resolve mh_resolve_dependencies exception when run with --non-interactive
     - Thank you Christopher Hoskin for the patch.  (Closes: #820163) 
+
+  [ Emmanuel Bourg ]
+  * Switch to debhelper level 10
 
  -- tony mancill <tmancill@debian.org>  Mon, 25 Jul 2016 20:54:03 -0700
 
