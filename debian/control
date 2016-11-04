@@ -8,7 +8,7 @@ Uploaders: Torsten Werner <twerner@debian.org>,
            Thomas Koch <thomas@koch.ro>,
            Emmanuel Bourg <ebourg@apache.org>,
            Wolodja Wentland <debian@babilen5.org>
-Build-Depends: cdbs, debhelper (>= 10), default-jdk, maven-ant-helper (>= 7.0), ant-optional, help2man
+Build-Depends: cdbs, debhelper (>= 10), default-jdk-headless | default-jdk, maven-ant-helper (>= 7.0), ant-optional, help2man
 Build-Depends-Indep: junit4,
                      libcommons-io-java,
                      libmaven3-core-java,
@@ -22,7 +22,7 @@ Homepage: http://wiki.debian.org/Java/MavenBuilder
 
 Package: maven-debian-helper
 Architecture: all
-Depends: ${misc:Depends}, default-jdk, maven-repo-helper (>= 1.9), maven (>= 3.3),
+Depends: ${misc:Depends}, default-jdk-headless | default-jdk, maven-repo-helper (>= 1.9), maven (>= 3.3),
          libmaven-clean-plugin-java,
          libmaven-compiler-plugin-java,
          libmaven-jar-plugin-java,
