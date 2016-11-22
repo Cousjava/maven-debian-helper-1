@@ -1,7 +1,11 @@
 maven-debian-helper (2.1.3) UNRELEASED; urgency=medium
 
+  [ Emmanuel Bourg ]
   * Team upload.
   * Always ignore maven-docck-plugin
+
+  [ Christopher Hoskin ]
+  * Pass params passed to dh_auto_clean to Maven
 
  -- Emmanuel Bourg <ebourg@apache.org>  Wed, 16 Nov 2016 17:15:38 +0100
 
