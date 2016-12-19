@@ -2,6 +2,8 @@ maven-debian-helper (2.1.3) UNRELEASED; urgency=medium
 
   [ Emmanuel Bourg ]
   * Team upload.
+  * Build the plugin metadata for the maven-replacer-plugin when copying
+    the Maven repository.
   * Always ignore maven-docck-plugin
 
   [ Christopher Hoskin ]
