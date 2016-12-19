@@ -4,6 +4,8 @@ maven-debian-helper (2.1.3) UNRELEASED; urgency=medium
   * Team upload.
   * Build the plugin metadata for the maven-replacer-plugin when copying
     the Maven repository.
+  * Ensure the target directories exist before generating
+    the maven-metadata-local.xml files.
   * Always ignore maven-docck-plugin
 
   [ Christopher Hoskin ]

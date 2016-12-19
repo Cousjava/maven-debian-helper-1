@@ -94,6 +94,7 @@ for groupId in $PLUGIN_GROUPS; do
   fi
 
   # plugin group metadata
+  mkdir -p $DEST_REPO/$GROUP/
   cat > $DEST_REPO/$GROUP/$METADATA_NAME <<EOF
 <metadata>
   <plugins>
@@ -122,6 +123,7 @@ EOF
 
   # plugin version metadata
   find_group_artifact_ids $GROUP | while read artifactId; do
+    mkdir -p $DEST_REPO/$GROUP/$artifactId/
     cat > $DEST_REPO/$GROUP/$artifactId/$METADATA_NAME <<EOF
 <metadata>
   <groupId>$groupId</groupId>
