@@ -1,7 +1,8 @@
-maven-debian-helper (2.1.3) UNRELEASED; urgency=medium
+maven-debian-helper (2.1.3) unstable; urgency=medium
+
+  * Team upload.
 
   [ Emmanuel Bourg ]
-  * Team upload.
   * Build the plugin metadata for the maven-replacer-plugin when copying
     the Maven repository.
   * Ensure the target directories exist before generating
@@ -11,7 +12,7 @@ maven-debian-helper (2.1.3) UNRELEASED; urgency=medium
   [ Christopher Hoskin ]
   * Pass params passed to dh_auto_clean to Maven
 
- -- Emmanuel Bourg <ebourg@apache.org>  Wed, 16 Nov 2016 17:15:38 +0100
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 19 Dec 2016 23:33:24 +0100
 
 maven-debian-helper (2.1.2) unstable; urgency=medium
 
