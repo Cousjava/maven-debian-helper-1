@@ -1,3 +1,12 @@
+maven-debian-helper (2.1.4) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Fix "Do not modify the debian control files during package build"
+    Add a --build option to DependenciesSolver to suppress overwriting poms
+    and rules files (Closes: #807686)
+
+ -- Christopher Hoskin <mans0954@debian.org>  Sun, 08 Jan 2017 21:32:55 +0000
+
 maven-debian-helper (2.1.3) unstable; urgency=medium
 
   * Team upload.

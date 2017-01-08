@@ -7,7 +7,7 @@ CLASSPATH="/usr/share/java/maven-repo-helper.jar:/usr/share/java/maven-packager-
 
 syntax()
 {
-   echo -e "Usage: mh_revolve_dependencies [option]... <package>"
+   echo -e "Usage: mh_resolve_dependencies [option]... <package>"
    echo -e "Resolve the dependencies and generates the substvars"
    echo -e "file containing the list of dependent packages."
    echo -e ""
@@ -27,6 +27,7 @@ syntax()
    echo -e "\t-v --verbose: show more information while running"
    echo -e "\t-b --base-directory: path to root directory of package"
    echo -e "\t   --non-explore: doesn't explore directories for pom.xml"
+   echo -e "\t   --build: Don't write files to debian folder other than substvars" 
    echo -e ""
    echo -e "Description:"
    echo -e "This tool reads the POM files defined in debian/$package.poms"
@@ -42,7 +43,7 @@ syntax()
    exit 1
 }
 
-ARGS="p package a ant d javadoc v verbose n non-interactive o offline b base-directory non-explore" parseargs "$@"
+ARGS="p package a ant d javadoc v verbose n non-interactive o offline b base-directory non-explore build" parseargs "$@"
 
 PACKAGE=$(getarg p package)
 ANT=$(getarg a ant)
@@ -52,6 +53,7 @@ OFFLINE=$(getarg o offline)
 VERBOSE=$(getarg v verbose)
 BASE_DIR=$(getarg b base-directory)
 NON_EXPLORE=$(getarg non-explore)
+BUILD=$(getarg build)
 
 if [ -z "$PACKAGE" ]; then
     if [ "$ARGC" -gt "0" ]; then
@@ -74,6 +76,6 @@ if [ ! -e .debianVersion -a ! -e debian/stamp-poms-patched ]; then
     fi
 fi
 
-java $JAVA_OPTS -cp $CLASSPATH org.debian.maven.packager.DependenciesSolver ${NON_INTERACTIVE:+--non-interactive} ${NON_EXPLORE:+--non-explore} ${OFFLINE:+--offline} ${ANT:+--ant} ${GEN_JAVADOC:+--generate-javadoc} ${BASE_DIR:+--base-directory=$BASE_DIR} ${VERBOSE:+--verbose} --package=$PACKAGE --maven-repo=/usr/share/maven-repo
+java $JAVA_OPTS -cp $CLASSPATH org.debian.maven.packager.DependenciesSolver ${NON_INTERACTIVE:+--non-interactive} ${NON_EXPLORE:+--non-explore} ${OFFLINE:+--offline} ${BUILD:+--build} ${ANT:+--ant} ${GEN_JAVADOC:+--generate-javadoc} ${BASE_DIR:+--base-directory=$BASE_DIR} ${VERBOSE:+--verbose} --package=$PACKAGE --maven-repo=/usr/share/maven-repo
 
 perl -p -i -e 's/maven\./maven:/' debian/${PACKAGE}.substvars

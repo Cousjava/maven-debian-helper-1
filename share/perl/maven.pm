@@ -109,7 +109,7 @@ sub install {
 		"-Dinstall.to.usj=true",
 		"org.debian.maven:debian-maven-plugin:$maven_debian_version:install");
 	$this->doit_in_builddir("mh_resolve_dependencies", "--non-interactive",
-		"--offline", "-p$this->{package}", @resolvedep_args);
+		"--offline", "--build", "-p$this->{package}", @resolvedep_args);
 	if ($this->{doc_package}) {
 		doit("cp","debian/$this->{package}.substvars",
 			"debian/$this->{doc_package}.substvars");

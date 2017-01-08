@@ -119,7 +119,7 @@ DEB_RESOLVEDEP_ARGS += --base-directory=$(CURDIR) --non-explore
 common-install-arch common-install-indep:: common-install-impl
 common-install-impl::
 	$(if $(DEB_MAVEN_INSTALL_TARGET),$(DEB_MAVEN_INVOKE) $(PLUGIN_ARGS) $(DEB_MAVEN_INSTALL_TARGET),@echo "DEB_MAVEN_INSTALL_TARGET unset, skipping default maven.mk common-install target")
-	$(if $(cdbs_use_maven_substvars), mh_resolve_dependencies --non-interactive --offline -p$(DEB_JAR_PACKAGE) $(DEB_RESOLVEDEP_ARGS) )
+	$(if $(cdbs_use_maven_substvars), mh_resolve_dependencies --non-interactive --offline --build -p$(DEB_JAR_PACKAGE) $(DEB_RESOLVEDEP_ARGS) )
 
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
 common-build-arch common-build-indep:: debian/stamp-maven-check

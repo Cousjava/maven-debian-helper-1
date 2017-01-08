@@ -879,6 +879,7 @@ public class DependenciesSolver {
             System.out.println("    POM file with the versions found in the repository");
             System.out.println("  --base-directory: path to root directory of package");
             System.out.println("  --non-explore: doesn't explore directories for pom.xml");
+            System.out.println("  --build: Don't write files to debian folder other than substvars");
             return;
         }
 
@@ -893,6 +894,7 @@ public class DependenciesSolver {
         boolean generateJavadoc = false;
         boolean interactive = true;
         boolean offline = false;
+	boolean build = false;
 
         // Parse parameters
         int i = inc(-1, args);
@@ -926,7 +928,10 @@ public class DependenciesSolver {
                 baseDirectory = new File(arg.substring("--base-directory=".length()));
             } else if (arg.equals("--non-explore")) {
                 exploreProjects = false;
+            } else if (arg.equals("--build")) {
+                build = true;
             }
+
             i = inc(i, args);
         }
 
@@ -961,8 +966,12 @@ public class DependenciesSolver {
 
         solver.solveDependencies();
 
-        solver.pomTransformer.getListOfPOMs().save();
-        solver.pomTransformer.getRulesFiles().save(outputDirectory);
+	// Don't overwrite the poms or rules files during a build
+	if (!build) {
+	        solver.pomTransformer.getListOfPOMs().save();
+	        solver.pomTransformer.getRulesFiles().save(outputDirectory);
+	}
+	// Do generate the substvars though
         solver.saveSubstvars();
 
         if (!solver.issues.isEmpty()) {
