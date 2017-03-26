@@ -31,6 +31,7 @@ Depends: ${misc:Depends}, default-jdk-headless | default-jdk, maven-repo-helper 
          libplexus-velocity-java,
          libsurefire-java,
          libxml2-utils,
+         licensecheck,
          velocity,
          unzip
 Suggests: libmaven-javadoc-plugin-java, apt-file, devscripts, subversion
