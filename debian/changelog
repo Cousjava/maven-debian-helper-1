@@ -8,6 +8,8 @@ maven-debian-helper (2.1.4) UNRELEASED; urgency=medium
 
   [ tony mancill ]
   * Add licensecheck as dependency of maven-debian-helper (Closes: #840787)
+  * Update verbiage in copyright holder prompt to be gender-neutral.
+    Thanks to Tom Mable for the bug report. (Closes: #859012)
 
  -- Christopher Hoskin <mans0954@debian.org>  Sun, 08 Jan 2017 21:32:55 +0000
 
