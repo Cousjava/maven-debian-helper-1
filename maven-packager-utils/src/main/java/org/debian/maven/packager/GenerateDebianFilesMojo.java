@@ -246,7 +246,7 @@ public class GenerateDebianFilesMojo extends AbstractMojo {
                 }
             }
             if (copyrightOwner == null || copyrightOwner.isEmpty()) {
-                copyrightOwner = new SimpleQuestion("Could not find who owns the copyright for the upstream sources, please enter his name:").ask();
+                copyrightOwner = new SimpleQuestion("Could not find the copyright owner(s) for the upstream sources, please enter their name(s):").ask();
             }
             context.put("copyrightOwner", copyrightOwner);
 
