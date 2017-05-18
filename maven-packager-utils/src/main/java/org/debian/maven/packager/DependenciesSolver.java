@@ -414,7 +414,7 @@ public class DependenciesSolver {
 
             if (exploreProjects && !pom.getModules().isEmpty()) {
                 if (interactive && !askedToFilterModules) {
-                    filterModules = !new YesNoQuestion("This project contains modules. Include all modules?", true).ask();
+                    filterModules = !new YesNoQuestion("This project contains modules. Include all modules? (no to select them individually)", true).ask();
                     askedToFilterModules = true;
                 }
                 for (String module : pom.getModules()) {

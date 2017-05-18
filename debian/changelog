@@ -17,6 +17,7 @@ maven-debian-helper (2.2) UNRELEASED; urgency=medium
     and fixed the error message in mh_make when licensecheck isn't installed
     (Closes: #840787)
   * Removed mvn-debian (Closes: #703373)
+  * Clarified the 'Include all modules?' question (Closes: #758611)
 
  -- Christopher Hoskin <mans0954@debian.org>  Sun, 08 Jan 2017 21:32:55 +0000
 
