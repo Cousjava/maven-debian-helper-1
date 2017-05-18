@@ -27,7 +27,7 @@ syntax()
    echo -e "\t-v --verbose: show more information while running"
    echo -e "\t-b --base-directory: path to root directory of package"
    echo -e "\t   --non-explore: doesn't explore directories for pom.xml"
-   echo -e "\t   --build: Don't write files to debian folder other than substvars" 
+   echo -e "\t   --build: build mode (don't write the .poms and rules files)"
    echo -e ""
    echo -e "Description:"
    echo -e "This tool reads the POM files defined in debian/$package.poms"

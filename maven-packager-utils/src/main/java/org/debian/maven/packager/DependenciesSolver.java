@@ -879,7 +879,7 @@ public class DependenciesSolver {
             System.out.println("    POM file with the versions found in the repository");
             System.out.println("  --base-directory: path to root directory of package");
             System.out.println("  --non-explore: doesn't explore directories for pom.xml");
-            System.out.println("  --build: Don't write files to debian folder other than substvars");
+            System.out.println("  --build: build mode (don't write the .poms and rules files)");
             return;
         }
 
