@@ -894,7 +894,7 @@ public class DependenciesSolver {
         boolean generateJavadoc = false;
         boolean interactive = true;
         boolean offline = false;
-	boolean build = false;
+        boolean build = false;
 
         // Parse parameters
         int i = inc(-1, args);
@@ -966,12 +966,12 @@ public class DependenciesSolver {
 
         solver.solveDependencies();
 
-	// Don't overwrite the poms or rules files during a build
-	if (!build) {
-	        solver.pomTransformer.getListOfPOMs().save();
-	        solver.pomTransformer.getRulesFiles().save(outputDirectory);
-	}
-	// Do generate the substvars though
+        // Don't overwrite the poms or rules files during a build
+        if (!build) {
+            solver.pomTransformer.getListOfPOMs().save();
+            solver.pomTransformer.getRulesFiles().save(outputDirectory);
+        }
+        // Do generate the substvars though
         solver.saveSubstvars();
 
         if (!solver.issues.isEmpty()) {
