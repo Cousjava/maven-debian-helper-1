@@ -1,5 +1,4 @@
 bin/mh_*			/usr/bin
-bin/mvn-debian			/usr/bin
 etc/*.conf			/etc/maven/
 etc/*.xml			/etc/maven/
 share/cdbs/1/class/*.mk		/usr/share/cdbs/1/class
