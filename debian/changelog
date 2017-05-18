@@ -11,6 +11,10 @@ maven-debian-helper (2.1.4) UNRELEASED; urgency=medium
   * Update verbiage in copyright holder prompt to be gender-neutral.
     Thanks to Tom Mable for the bug report. (Closes: #859012)
 
+  [ Emmanuel Bourg ]
+  * Add the debian.hasPackageVersion property in the installed poms when
+    the --has-package-version option is specified (Closes: #862894)
+
  -- Christopher Hoskin <mans0954@debian.org>  Sun, 08 Jan 2017 21:32:55 +0000
 
 maven-debian-helper (2.1.3) unstable; urgency=medium

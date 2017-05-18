@@ -730,6 +730,10 @@ public class SysInstallMojo extends AbstractMojo {
 
         List<String> params = new ArrayList<String>();
         params.add("--keep-pom-version");
+        boolean hasPackageVersion = pomOption != null && pomOption.getHasPackageVersion();
+        if (hasPackageVersion) {
+            params.add("--has-package-version");
+        }
 
         params.add("--package=" + destPackage);
         String mavenRulesPath = new File(debianDir, mavenRules).getAbsolutePath();
@@ -740,7 +744,7 @@ public class SysInstallMojo extends AbstractMojo {
         params.add("--published-rules=" + mavenPublishedRulesPath);
 
         getLog().info("Cleaning pom file: " + pomFile + " with options:");
-        getLog().info("\t--keep-pom-version --package=" + destPackage);
+        getLog().info("\t--keep-pom-version --package=" + destPackage + (hasPackageVersion ? " --has-package-version" : ""));
         getLog().info("\t--rules=" + mavenRulesPath);
         getLog().info("\t--ignore-rules=" + mavenIgnoreRulesPath);
         getLog().info("\t--published-rules=" + mavenPublishedRulesPath);
