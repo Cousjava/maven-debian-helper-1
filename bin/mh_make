@@ -152,7 +152,7 @@ echo
 echo "Checking that licensecheck is installed..."
 if [ ! -x /usr/bin/licensecheck ]; then
     echo "Error: licensecheck is not available." >&2
-    echo "Please install the 'devscripts' package and try again." >&2
+    echo "Please install the 'licensecheck' package and try again." >&2
     exit 1
 else
     echo '[ok]'

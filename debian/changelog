@@ -7,13 +7,15 @@ maven-debian-helper (2.1.4) UNRELEASED; urgency=medium
     and rules files (Closes: #807686)
 
   [ tony mancill ]
-  * Add licensecheck as dependency of maven-debian-helper (Closes: #840787)
   * Update verbiage in copyright holder prompt to be gender-neutral.
     Thanks to Tom Mable for the bug report. (Closes: #859012)
 
   [ Emmanuel Bourg ]
   * Add the debian.hasPackageVersion property in the installed poms when
     the --has-package-version option is specified (Closes: #862894)
+  * Replaced the suggested dependency on devscripts with licensecheck
+    and fixed the error message in mh_make when licensecheck isn't installed
+    (Closes: #840787)
 
  -- Christopher Hoskin <mans0954@debian.org>  Sun, 08 Jan 2017 21:32:55 +0000
 
