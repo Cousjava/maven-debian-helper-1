@@ -6,6 +6,7 @@ maven-debian-helper (2.2.1) UNRELEASED; urgency=medium
   * Standards-Version updated to 4.0.0
   * The generated control file now specifies Standards-Version: 4.0.0
   * Replaced the references to eclipse-aether with maven-resolver
+  * Updated the version of the Maven dependencies to 3.5 in pom.xml
 
  -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Jun 2017 14:04:15 +0200
 
