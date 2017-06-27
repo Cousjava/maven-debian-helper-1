@@ -1,3 +1,10 @@
+maven-debian-helper (2.2.1) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Standards-Version updated to 4.0.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Jun 2017 14:04:15 +0200
+
 maven-debian-helper (2.2) unstable; urgency=medium
 
   * Team upload.
