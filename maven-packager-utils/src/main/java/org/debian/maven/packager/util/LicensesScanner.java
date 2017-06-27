@@ -73,7 +73,7 @@ public class LicensesScanner {
     private String getAvailableLicenses() {
         return "Apache-2.0 Artistic BSD FreeBSD ISC CC-BY CC-BY-SA CC-BY-ND CC-BY-NC CC-BY-NC-SA\n"
          + "CC-BY-NC-ND CC0 CDDL CPL Eiffel EPL-1.0 Expat GPL-2 GPL-3 LGPL-2 LGPL-2.1 LGPL-3"
-         + "GFDL-1.2 GFDL-1.3 GFDL-NIV LPPL MPL Perl PSF QPL W3C-Software ZLIB Zope";
+         + "GFDL-1.2 GFDL-1.3 GFDL-NIV LPPL MPL-1.1 MPL-2.0 Perl PSF QPL W3C-Software ZLIB Zope";
     }
 
     boolean recognizeLicense(Set<String> licenses, String licenseName, String licenseUrl) {
@@ -124,7 +124,14 @@ public class LicensesScanner {
                 licenses.add("GPL-3");
                 recognized = true;
             }
-
+        } else if (licenseName.contains("mpl") || licenseUrl.contains("mpl")) {
+            if (licenseName.contains("1.1") || licenseUrl.contains("1.1")) {
+                licenses.add("MPL-1.1");
+                recognized = true;
+            } else if (licenseName.contains("2.0") || licenseUrl.contains("2.0")) {
+                licenses.add("MPL-2.0");
+                recognized = true;
+            }
         } else if (licenseUrl.contains("http://creativecommons.org/licenses/by-sa/3.0")) {
             licenses.add("CC-BY-SA-3.0");
             recognized = true;

@@ -1,6 +1,7 @@
 maven-debian-helper (2.2.1) UNRELEASED; urgency=medium
 
   * Team upload.
+  * Added the MPL-1.1 and MPL-2.0 to the list of the recognized licenses
   * The generated copyright file now has a https format URL
   * Standards-Version updated to 4.0.0
   * The generated control file now specifies Standards-Version: 4.0.0

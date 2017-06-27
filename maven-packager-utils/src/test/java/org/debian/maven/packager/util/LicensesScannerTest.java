@@ -34,5 +34,13 @@ public class LicensesScannerTest extends TestCase {
         assertTrue(scanner.recognizeLicense(licenses, "", "http://www.apache.org/licenses/LICENSE-2.0"));
         assertEquals("Apache-2.0", licenses.iterator().next());
         licenses.clear();
+
+        assertTrue(scanner.recognizeLicense(licenses, "MPL (v1.1)", ""));
+        assertEquals("MPL-1.1", licenses.iterator().next());
+        licenses.clear();
+
+        assertTrue(scanner.recognizeLicense(licenses, "", "https://www.mozilla.org/MPL/2.0/"));
+        assertEquals("MPL-2.0", licenses.iterator().next());
+        licenses.clear();
     }
 }
