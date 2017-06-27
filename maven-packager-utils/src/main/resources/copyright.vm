@@ -1,5 +1,5 @@
 #set ($space = " ")
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ${project.Name}
 #if ($project.CiManagement && $project.CiManagement.Url)
 Upstream-Contact: ${project.CiManagement.Url}

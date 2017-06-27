@@ -1,6 +1,7 @@
 maven-debian-helper (2.2.1) UNRELEASED; urgency=medium
 
   * Team upload.
+  * The generated copyright file now has a https format URL
   * Standards-Version updated to 4.0.0
   * The generated control file now specifies Standards-Version: 4.0.0
 
