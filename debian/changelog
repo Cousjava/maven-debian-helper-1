@@ -1,3 +1,10 @@
+maven-debian-helper (2.2.2) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Hide the warning displayed by copy-repo.sh when processing poms without jar
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 27 Jul 2017 15:18:16 +0200
+
 maven-debian-helper (2.2.1) unstable; urgency=medium
 
   * Team upload.

@@ -131,7 +131,7 @@ EOF
   <versioning>
     <versions>
 EOF
-    find $SRC_REPO/$GROUP/$artifactId/*/*.jar | while read jar; do
+    find $SRC_REPO/$GROUP/$artifactId/*/*.jar 2>/dev/null | while read jar; do
       version=$(basename $(dirname $jar))
       cat >> $DEST_REPO/$GROUP/$artifactId/$METADATA_NAME <<EOF
       <version>$version</version>
